@@ -18,5 +18,5 @@ h1 {font-size:12rem;}
 .js-typer.active {opacity:1;visibility:visible;}
 
 @media (max-width: 800px) {
-    .object {font-size:2vh;}
+    .object {font-size:2.6vw;}
 }
