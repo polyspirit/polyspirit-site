@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+
+html, body {padding:0;margin:0;font-family:'Source Code Pro', monospace;font-size:10px;color:white;}
+
+h1 {font-size:12rem;}
+
+.wrapper {position:absolute;width:100%;height:100%;background-color:#222;}
+
+.title {margin:0;color:darkgreen;font-size:10.4vw;}
+
+.object {padding:2%;font-size:2vw;}
+.object .brace, .object .colon, .object .comma, .object .bracket {color:yellow;}
+.object .prop {padding-left:2%;}
+.object .prop-name {color:lemonchiffon;}
+.object .prop-value {color:lightblue;}
+
+.js-typer {opacity:0;visibility:hidden;transition:all 1s;}
+.js-typer.active {opacity:1;visibility:visible;}
