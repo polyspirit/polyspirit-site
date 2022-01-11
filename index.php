@@ -9,8 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link data-n-head="ssr" rel="icon" type="image/x-icon" href="favicon.ico">
-    <link data-n-head="ssr" rel="image_src" type="image/x-icon" href="favicon.ico">
+    <link type="image/x-icon" rel="shortcut icon" href="assets/images/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/favicon-180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16.png">
     <title>Polyspirit: back-end development</title>
 </head>
 <body>
