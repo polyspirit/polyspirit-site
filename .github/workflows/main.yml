@@ -14,4 +14,6 @@ jobs:
         server: 188.225.26.38
         username: poly
         password: ${{ secrets.ftp_password }}
+        protocol: ftps
+        port: 51111
         server-dir: /var/www/html/
