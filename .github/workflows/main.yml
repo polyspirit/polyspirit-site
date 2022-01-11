@@ -11,9 +11,9 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        server: 188.225.26.38
-        username: poly
-        password: ${{ secrets.ftp_password }}
+        ftp-server: 188.225.26.38
+        ftp-username: poly
+        ftp-password: ${{ secrets.ftp_password }}
         protocol: ftps
         port: 51111
         server-dir: /var/www/html/
