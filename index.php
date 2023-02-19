@@ -24,10 +24,11 @@
                 $builder->addProp('name', 'Anton Karabut');
                 $builder->addProp('birthdate', '13.06.1988');
                 $builder->addProp('nationality', 'russian');
+                $builder->addProp('location', 'Georgia');
                 $builder->addProp('workExperience', 'from 2010');
                 $builder->addProp('skills', ['php', 'js', 'c#', 'css', 'html']);
-                $builder->addProp('platforms', ['wordpress', 'laravel', 'unity']);
-                $builder->addProp('repository', 'https://github.com/polyspirit/polyspirit-site', true);
+                $builder->addProp('platforms', ['laravel', 'wordpress', 'bitrix', 'unity']);
+                $builder->addProp('github', 'https://github.com/polyspirit', true);
                 $builder->build();
             ?>
         </div>

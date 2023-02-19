@@ -1,7 +1,5 @@
 window.onload = () => {
-
     new Typer();
-
 }
 
 // int inclusive
