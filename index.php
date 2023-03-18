@@ -20,15 +20,15 @@
         <h1 class="title js-typer">/* <span class="js-typer-text" data-text="polyspirit"></span> */</h1>
         <div class="object">
             <?php
+                $data = json_decode(file_get_contents(__DIR__ . '/data.json'), true);
+
                 $builder = new ObjectBuilder();
-                $builder->addProp('name', 'Anton Karabut');
-                $builder->addProp('birthdate', '13.06.1988');
-                $builder->addProp('nationality', 'russian');
-                $builder->addProp('location', 'Georgia');
-                $builder->addProp('workExperience', 'from 2010');
-                $builder->addProp('skills', ['php', 'js', 'c#', 'css', 'html']);
-                $builder->addProp('platforms', ['laravel', 'wordpress', 'bitrix', 'unity']);
-                $builder->addProp('github', 'https://github.com/polyspirit', true);
+                $i = 1;
+                foreach ($data as $key => $value) {
+                    $last = $i === count($data);
+                    $builder->addProp($key, $value, $last);
+                    $i++;
+                }
                 $builder->build();
             ?>
         </div>
