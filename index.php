@@ -1,9 +1,9 @@
 <?php
-    require_once 'include/ObjectBuilder.php';
+require_once 'include/ObjectBuilder.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,25 +15,29 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16.png">
     <title>Polyspirit: back-end development</title>
 </head>
+
 <body>
     <div class="wrapper">
-        <h1 class="title js-typer">/* <span class="js-typer-text" data-text="polyspirit"></span> */</h1>
+        <h1 class="title js-typer">
+            /** <a href="https://t.me/poly_today" target="_blank"><span class="js-typer-text" data-text="@polyspirit"></span></a> */
+        </h1>
         <div class="object">
             <?php
-                $data = json_decode(file_get_contents(__DIR__ . '/data.json'), true);
+            $data = json_decode(file_get_contents(__DIR__ . '/data.json'), true);
 
-                $builder = new ObjectBuilder();
-                $i = 1;
-                foreach ($data as $key => $value) {
-                    $last = $i === count($data);
-                    $builder->addProp($key, $value, $last);
-                    $i++;
-                }
-                $builder->build();
+            $builder = new ObjectBuilder();
+            $i = 1;
+            foreach ($data as $key => $value) {
+                $last = $i === count($data);
+                $builder->addProp($key, $value, $last);
+                $i++;
+            }
+            $builder->build();
             ?>
         </div>
     </div>
     <script src="js/typer.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
