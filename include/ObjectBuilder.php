@@ -56,12 +56,18 @@ class ObjectBuilder
 
     private function addValueString(string $value): void
     {
-        $this->result .= '<span class="prop-value js-typer-text" data-text="' . $value . '" data-type="string"></span>';
+        $this->result .= '<span class="prop-value js-typer-text" data-text="'
+            . $value
+            . '" data-type="string"></span>';
     }
 
     private function addValueLink(string $value): void
     {
-        $this->result .= '<a href="' . $value . '" target="_blank" class="prop-value js-typer-text" data-text="' . $value . '" data-type="string"></a>';
+        $this->result .= '<a href="'
+            . $value
+            . '" target="_blank" class="prop-value js-typer-text" data-text="'
+            . $value
+            . '" data-type="string"></a>';
     }
 
     private function addValueArray(array $valuesArray): void
@@ -69,7 +75,9 @@ class ObjectBuilder
         $this->result .= '<span class="bracket js-typer-text" data-text="["></span>';
 
         foreach ($valuesArray as $key => $value) {
-            $this->result .= '<span class="prop-value js-typer-text" data-text="' . $value . '" data-type="string"></span>';
+            $this->result .= '<span class="prop-value js-typer-text" data-text="'
+                . $value
+                . '" data-type="string"></span>';
             if ($key < (count($valuesArray) - 1)) {
                 $this->result .= '<span class="comma js-typer-text" data-text=","></span> ';
             }
