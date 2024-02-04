@@ -2,20 +2,20 @@
 
 class ObjectBuilder
 {
-    public $result = '';
+    public string $result = '';
 
     public function __construct()
     {
         $this->addBrace();
     }
 
-    public function build()
+    public function build(): void
     {
         $this->addBrace(false);
         echo $this->result;
     }
 
-    public function addProp(string $name, $value, bool $last = false)
+    public function addProp(string $name, $value, bool $last = false): void
     {
         $this->result .= '<div class="prop js-typer">';
 
@@ -25,19 +25,19 @@ class ObjectBuilder
         $this->result .= '</div>';
     }
 
-    private function addBrace(bool $left = true)
+    private function addBrace(bool $left = true): void
     {
         $brace = $left ? '{' : '}';
         $this->result .= '<div class="brace">' . $brace . '</div>';
     }
 
-    private function addName(string $name)
+    private function addName(string $name): void
     {
         $this->result .= '<span class="prop-name js-typer-text" data-text="' . $name . '"></span>';
         $this->result .= '<span class="colon js-typer-text" data-text=":"></span> ';
     }
 
-    private function addValue($value, bool $comma = true)
+    private function addValue($value, bool $comma = true): void
     {
         if (is_string($value)) {
             if (stristr($value, 'http') !== false) {
@@ -54,17 +54,17 @@ class ObjectBuilder
         }
     }
 
-    private function addValueString(string $value)
+    private function addValueString(string $value): void
     {
         $this->result .= '<span class="prop-value js-typer-text" data-text="' . $value . '" data-type="string"></span>';
     }
 
-    private function addValueLink(string $value)
+    private function addValueLink(string $value): void
     {
         $this->result .= '<a href="' . $value . '" target="_blank" class="prop-value js-typer-text" data-text="' . $value . '" data-type="string"></a>';
     }
 
-    private function addValueArray(array $valuesArray)
+    private function addValueArray(array $valuesArray): void
     {
         $this->result .= '<span class="bracket js-typer-text" data-text="["></span>';
 
