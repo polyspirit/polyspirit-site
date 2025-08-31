@@ -4,13 +4,50 @@ html, body {padding:0; margin:0; font-family:'Source Code Pro', monospace; font-
 
 h1 {font-size: 12rem;}
 
-.wrapper {position:absolute; width:100%; height:100%; background-color:#222;}
+.wrapper {
+    display:flex; 
+    justify-content: space-between; 
+    position:absolute; 
+    width:100%; 
+    height:100%; 
+    background-color:#222;
+    overflow: hidden;
+}
 
-.title, .title a {margin:0; color: green; font-size:9vw; text-decoration: none;}
-.title a {color: darkgreen;}
-.title a:hover {text-decoration: underline;}
+.lines {
+    width: 3.5vw;
+    padding-right: 1vw;
+    height: 100%;
+    background-color:#333;
+}
 
-.object {padding:2%; font-size: 2vw;}
+.line {
+    width: 100%;
+    font-size: 2vw;
+    text-align: right;
+    color: #bbb;
+}
+
+.code {
+    width: calc(100% - 3vw);
+}
+
+.title, .title a {
+    margin:0; 
+    color: green; 
+    font-size:9vw; 
+    text-decoration: none;
+}
+.title a {
+    color: darkgreen;
+}
+.title a:hover {
+    text-decoration: underline;
+}
+
+.object {
+    padding:0 2%; font-size: 2vw;
+}
 .object .brace, .object .colon, .object .comma, .object .bracket {color: yellow;}
 .object .prop {padding-left: 2%;}
 .object .prop-name {color: lemonchiffon;}
@@ -20,5 +57,7 @@ h1 {font-size: 12rem;}
 .js-typer.active {opacity:1; visibility: visible;}
 
 @media (max-width: 800px) {
-    .object {font-size: 2.6vw;}
+    .object, .line {
+        font-size: 2.6vw;
+    }
 }

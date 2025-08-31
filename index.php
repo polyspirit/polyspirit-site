@@ -18,22 +18,29 @@ require_once 'include/ObjectBuilder.php';
 
 <body>
     <div class="wrapper">
-        <h1 class="title js-typer">
-            /** <a href="https://t.me/poly_today" target="_blank"><span class="js-typer-text" data-text="@polyspirit"></span></a> */
-        </h1>
-        <div class="object">
-            <?php
-            $data = json_decode(file_get_contents(__DIR__ . '/data.json'), true);
+        <div class="lines">
+            <div class="line">&nbsp;</div>
+            <?php for ($i = 1; $i <= 100; $i++) { ?>
+                <div class="line"><?php echo $i; ?></div>
+            <?php } ?>
+        </div>
+        <div class="code">
+            <div class="object">
+                <div>&nbsp;</div>
 
-            $builder = new ObjectBuilder();
-            $i = 1;
-            foreach ($data as $key => $value) {
-                $last = $i === count($data);
-                $builder->addProp($key, $value, $last);
-                $i++;
-            }
-            $builder->build();
-            ?>
+<?php
+$data = json_decode(file_get_contents(__DIR__ . '/data.json'), true);
+
+$builder = new ObjectBuilder();
+$i = 1;
+foreach ($data as $key => $value) {
+    $last = $i === count($data);
+    $builder->addProp($key, $value, $last);
+    $i++;
+}
+$builder->build();
+?>
+            </div>
         </div>
     </div>
     <script src="js/typer.js"></script>
