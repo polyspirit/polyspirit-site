@@ -1,3 +1,6 @@
 data.json
 .idea
 .vscode
+.htaccess
+.well-known
+error_log
